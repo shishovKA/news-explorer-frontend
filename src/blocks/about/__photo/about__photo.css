@@ -1,0 +1,9 @@
+.about__photo {
+    width: 464px;
+    height: 464px;
+    flex-shrink: 0;
+    background-image: url(../../../images/about.jpg);
+    border-radius: 1000px;
+    background-size: cover;
+    background-position: center;
+}

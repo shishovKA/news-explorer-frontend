@@ -1,14 +1,21 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Roboto Slab';
   font-style:  normal;
-  font-weight: 400;
-  src: url("./fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 700;
+  src: url("./fonts/robotoslab-regular.woff") format("woff2");
 }
 
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Roboto';
   font-style:  normal;
-  font-weight: 900;
-  src: url("./fonts/Inter-Black.woff2") format("woff2");
+  font-weight: 500;
+  src: url("./fonts/roboto-medium.woff") format("woff2");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("./fonts/roboto-regular.woff") format("woff2");
 }

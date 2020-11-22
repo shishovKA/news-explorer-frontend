@@ -1,8 +1,8 @@
 {
-  "name": "praktikum_sprint_11.github.io",
+  "name": "news-explorer-frontend",
   "version": "1.0.0",
-  "description": "Проект Место с подключенным Webpack",
-  "main": "src/index.js",
+  "description": "Диплом Фронтенд",
+  "main": "src/MainPage/index.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1"
@@ -30,18 +30,18 @@
     "webpack-md5-hash": "0.0.6"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "start": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shishovKA/praktikum_sprint_11.github.io.git"
+    "url": "git+https://github.com/shishovKA/news-explorer-frontend.github.io.git"
   },
   "author": "Konstantin Shishov <shishov.k.a@yandex.ru>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shishovKA/praktikum_sprint_11.github.io/issues"
+    "url": "https://github.com/shishovKA/news-explorer-frontend.github.io/issues"
   },
-  "homepage": "https://github.com/shishovKA/praktikum_sprint_11.github.io/"
+  "homepage": "https://github.com/shishovKA/news-explorer-frontend.github.io/"
 }

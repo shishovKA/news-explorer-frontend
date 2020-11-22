@@ -1,0 +1,42 @@
+
+.header__button {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 34px;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 6px);
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    box-shadow: 0 3px 0px #FFFFFF;
+    text-decoration: none;
+    color: inherit; /* blue colors for links too */
+  }
+
+.header__button_dark {
+    box-shadow: 0 3px 0px black;
+  }
+
+.header__button_auth {
+    height: 48px;
+    border: solid 1px;
+    border-radius: 100px;
+    box-shadow: none;
+}
+
+.header__button_not-selected {
+    color: #B6BCBF;
+    height: 100%;
+    box-shadow: none;
+}
+
+.header__button_not-selected-dark {
+    color: inherit;
+    height: 100%;
+    box-shadow: none;
+}
+

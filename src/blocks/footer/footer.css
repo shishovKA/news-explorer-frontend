@@ -1,0 +1,15 @@
+
+@import url(./__copyright/footer__copyright.css);
+
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 104px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #1A1B22;
+}

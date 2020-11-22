@@ -1,0 +1,19 @@
+.header__link {
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__link_full {
+    height: 100%;
+    width: 100%;
+}
+
+.header__link_auth {
+    height: 100%;
+    width: 100%;
+    padding: 0px 19px;
+    border-radius: 100px;
+}

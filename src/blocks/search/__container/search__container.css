@@ -1,0 +1,7 @@
+.search__container {
+    width: 100%;
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

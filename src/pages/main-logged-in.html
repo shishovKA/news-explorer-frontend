@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +7,8 @@
   <title>news-api</title>
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
-
 <body>
+  
 
   <header class="header">
     <p class="header__title">NewsExplorer</p>
@@ -17,16 +16,22 @@
       <li class="header__button">
         <a href="/" class="header__link header__link_full">Главная</a>
       </li>
-      <!--
+
       <li class="header__button header__button_not-selected">
-        <a href="/saved-page.html" class="header__link">Сохраненные статьи</a>
+        <a href="/" class="header__link header__link_full">Сохраненные статьи</a>
       </li>
-      -->
+
       <li class="header__button header__button_auth">
-        <a href="/main-logged-in.html" class="header__link header__link_auth">Авторизоваться</a>
+        <a href="" class="header__link header__link_auth">
+          Грета 
+          <img src="<%=require('../images/logout_white.svg').default%>" alt="arrow icon" class="logo">
+        </a>
+        
       </li>
+
     </ul>
   </header>
+
 
   <section class="section section_search">
     <div class="search__container">
@@ -54,7 +59,6 @@
         </p>
       </div>
     </div>
-
   </section>
 
   <footer class="footer">
@@ -68,20 +72,21 @@
       </li>
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="https://github.com/shishovKA" class="header__link" target="_blank">
-          <img src="<%=require('./images/github.svg').default%>" alt="github icon" class="logo">
+          <img src="<%=require('../images/github.svg').default%>" alt="github icon" class="logo">
         </a>
       </li>
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="https://facebook.com/" class="header__link" target="_blank">
-          <img src="<%=require('./images/facebook.svg').default%>" alt="facebook icon" class="logo">
+          <img src="<%=require('../images/facebook.svg').default%>" alt="facebook icon" class="logo">
         </a>
       </li>
     </ul>
   </footer>
 
-
+  
+  
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
 </body>
-
 </html>
+

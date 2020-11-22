@@ -1,0 +1,8 @@
+.header__container {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+  }
