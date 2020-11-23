@@ -13,6 +13,8 @@
 
 @import url(./blocks/card/card.css);
 
+@import url(./blocks/popup/popup.css);
+
 
 body {
   margin-right: auto;

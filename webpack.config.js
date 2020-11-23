@@ -82,6 +82,13 @@ module.exports = {
       chunks: ['main'],
     }),
 
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/pages/main-popup.html',
+      filename: 'main-popup.html',
+      chunks: ['main'],
+    }),
+
     new WebpackMd5Hash(),
     
     new webpack.DefinePlugin({'NODE_ENV': JSON.stringify(process.env.NODE_ENV)})

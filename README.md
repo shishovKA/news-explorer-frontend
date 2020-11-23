@@ -9,3 +9,4 @@
 * [Main_Logged_In](https://shishovka.github.io/news-explorer-frontend/main-logged-in)
 * [Main_Results](https://shishovka.github.io/news-explorer-frontend/main-results)
 * [Saved_News](https://shishovka.github.io/news-explorer-frontend/saved-news)
+* [Popup](https://shishovka.github.io/news-explorer-frontend/main-popup)
