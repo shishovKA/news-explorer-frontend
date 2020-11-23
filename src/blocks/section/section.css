@@ -15,3 +15,23 @@
     color: #FFFFFF;
     background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
 }
+
+
+.section_result {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 80px 104px ;
+    background-color: #F5F6F7;
+}
+
+.section_result-no-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 64px 104px ;
+    background-color: #F5F6F7; 
+}
+
+.section_info {
+    padding: 40px 104px 56px 104px;
+    width: 520px;
+}

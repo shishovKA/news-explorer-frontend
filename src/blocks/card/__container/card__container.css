@@ -1,0 +1,11 @@
+.card__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 64px 0px;
+    justify-content: space-between;
+}
+
+.card__container_no-title {
+    margin: 0px;
+}

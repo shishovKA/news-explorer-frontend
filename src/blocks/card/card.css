@@ -1,0 +1,31 @@
+
+
+@import url(./__image/card__image.css);
+@import url(./__add-icon/card__add-icon.css);
+@import url(./__description/card__description.css);
+
+@import url(./__name/card__name.css);
+@import url(./__date/card__date.css);
+@import url(./__text/card__text.css);
+@import url(./__author/card__author.css);
+
+
+@import url(./__container/card__container.css);
+
+
+.card {
+  flex-basis: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  height: 576px;
+  margin-bottom: 16px;
+}
+
+.card:last-child {
+  margin-left: 16px;
+  margin-right: auto;
+}
+
+
+
+

@@ -19,3 +19,10 @@
   font-weight: 400;
   src: url("./fonts/roboto-regular.woff") format("woff2");
 }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("./fonts/sourcesanspro-regular.woff") format("woff2");
+}

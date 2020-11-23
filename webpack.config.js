@@ -68,6 +68,20 @@ module.exports = {
       chunks: ['main'],
     }),
 
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/pages/main-results.html',
+      filename: 'main-results.html',
+      chunks: ['main'],
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/pages/saved-news.html',
+      filename: 'saved-news.html',
+      chunks: ['main'],
+    }),
+
     new WebpackMd5Hash(),
     
     new webpack.DefinePlugin({'NODE_ENV': JSON.stringify(process.env.NODE_ENV)})

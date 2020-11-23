@@ -1,0 +1,29 @@
+.card__add-icon {
+  background: url(../../../images/bookmark.svg) center no-repeat;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  
+}
+
+.card__add-icon:hover {
+  background: url(../../../images/bookmark-hover.svg) center no-repeat; 
+  background-color: #FFFFFF;
+}
+
+.card__add-icon:active {
+  background: url(../../../images/bookmark-active.svg) center no-repeat; 
+  background-color: #FFFFFF;
+}
+
+.card__add-icon:focus {
+  outline: none;
+}
+
+
