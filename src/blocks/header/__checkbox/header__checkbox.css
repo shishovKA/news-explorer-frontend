@@ -1,0 +1,27 @@
+.checkbox {
+  display: none;  
+}
+
+.checkbox__label {
+    display: none;
+    margin: 0px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../images/menu.svg');
+    cursor: pointer;
+}
+
+
+.checkbox:checked + .checkbox__label {
+    background-image: url('../../../images/menu_close.svg');
+}
+
+@media screen and (max-width: 700px) {
+    .checkbox__label {
+        display: block;
+    }  
+    
+    .checkbox:checked + .checkbox__label + .header__container {
+        display: flex;
+    } 
+  }
