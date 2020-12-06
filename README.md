@@ -5,8 +5,5 @@
 * npm run dev - для локальной разработки
 
 ### Навигация по страницам / состояниям
-* [Main_Not_Logged_In](https://shishovka.github.io/news-explorer-frontend/)
-* [Main_Logged_In](https://shishovka.github.io/news-explorer-frontend/main-logged-in)
-* [Main_Results](https://shishovka.github.io/news-explorer-frontend/main-results)
+* [Main](https://shishovka.github.io/news-explorer-frontend/)
 * [Saved_News](https://shishovka.github.io/news-explorer-frontend/saved-news)
-* [Popup](https://shishovka.github.io/news-explorer-frontend/main-popup)

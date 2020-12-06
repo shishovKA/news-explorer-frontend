@@ -6,6 +6,9 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
+const mainUrl = (process.env.NODE_ENV === 'development') ? "/" : "https://shishovka.github.io/news-explorer-frontend/"
+const savedNewsUrl = (process.env.NODE_ENV === 'development') ? "/saved-news.html" : "https://shishovka.github.io/news-explorer-frontend/saved-news"
+
 module.exports = {
   entry: { 
     main: './src/index.js',
@@ -59,20 +62,8 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['main'],
-    }),
-
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/pages/main-logged-in.html',
-      filename: 'main-logged-in.html',
-      chunks: ['main'],
-    }),
-
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/pages/main-results.html',
-      filename: 'main-results.html',
-      chunks: ['main'],
+      main_Url: mainUrl,
+      savedNews_Url: savedNewsUrl,
     }),
 
     new HtmlWebpackPlugin({
@@ -80,13 +71,8 @@ module.exports = {
       template: './src/pages/saved-news.html',
       filename: 'saved-news.html',
       chunks: ['main'],
-    }),
-
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/pages/main-popup.html',
-      filename: 'main-popup.html',
-      chunks: ['main'],
+      main_Url: mainUrl,
+      savedNews_Url: savedNewsUrl,
     }),
 
     new WebpackMd5Hash(),

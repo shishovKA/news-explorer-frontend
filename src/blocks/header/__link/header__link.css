@@ -16,4 +16,6 @@
     width: 100%;
     padding: 0px 19px;
     border-radius: 100px;
+    text-align: center;
+    justify-content: center;
 }

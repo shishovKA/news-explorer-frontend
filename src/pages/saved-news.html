@@ -16,15 +16,15 @@
         <p class="header__title">NewsExplorer</p>
         <ul class="header__container">
             <li class="header__button header__button_not-selected-dark">
-                <a href="/" class="header__link header__link_full">Главная</a>
+                <a href="<%= htmlWebpackPlugin.options.main_Url %>" class="header__link header__link_full">Главная</a>
             </li>
 
             <li class="header__button header__button_dark">
-                <a href="/saved-news.html" class="header__link header__link_full">Сохраненные статьи</a>
+                <a href="<%= htmlWebpackPlugin.options.savedNews_Url %>" class="header__link header__link_full">Сохраненные статьи</a>
             </li>
 
             <li class="header__button header__button_auth">
-                <a href="" class="header__link header__link_auth">
+                <a class="header__link header__link_auth">
                     Грета
                     <img src="<%=require('../images/logout.svg').default%>" alt="arrow icon" class="logo">
                 </a>
@@ -137,7 +137,7 @@
         <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
         <ul class="header__container">
             <li class="header__button header__button_dark header__button_not-selected-dark">
-                <a href="/" class="header__link">Главная</a>
+                <a href="<%= htmlWebpackPlugin.options.main_Url %>" class="header__link">Главная</a>
             </li>
             <li class="header__button header__button_dark header__button_not-selected-dark">
                 <a href="https://praktikum.yandex.ru/" class="header__link" target="_blank">Яндекс.Практикум</a>
