@@ -1,8 +1,9 @@
 @import url(./__text/section__text.css);
 
 .section {
+    box-sizing: border-box;
     width: 100%;
-    color: #1A1B22;
+    color: #1a1b22;
 }
 
 .section_search {
@@ -12,26 +13,39 @@
     display: flex;
     justify-content: center;
     padding: 160px 0px 80px 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
 }
-
 
 .section_result {
     box-sizing: border-box;
     width: 100%;
-    padding: 80px 104px ;
-    background-color: #F5F6F7;
+    padding: 80px 104px;
+    background-color: #f5f6f7;
 }
 
 .section_result-no-title {
     box-sizing: border-box;
     width: 100%;
-    padding: 64px 104px ;
-    background-color: #F5F6F7; 
+    padding: 64px 104px;
+    background-color: #f5f6f7;
 }
 
 .section_info {
     padding: 40px 104px 56px 104px;
     width: 520px;
+}
+
+@media screen and (max-width: 768px) {
+    .section_search {
+        padding: 104px 0px 48px 0px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section_search {
+        padding: 86px 0px 32px 0px;
+        height: 536px;
+    }
 }

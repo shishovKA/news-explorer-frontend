@@ -1,12 +1,10 @@
 .about__title {
     margin: 0;
-    
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 46px;
-
     color: #1A1B22;
 }
 
@@ -22,4 +20,11 @@
     line-height: 46px;
 
     color: #1A1B22;
+}
+
+@media screen and (max-width: 480px) {
+    .about__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }

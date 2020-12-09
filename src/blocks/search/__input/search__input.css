@@ -15,10 +15,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    /* identical to box height, or 137% */
 
-
-    /* simulator/gray/text */
     color: #1A1B22;
     
 }
@@ -30,3 +27,10 @@
 .search__input::placeholder {
     color: #B6BCBF;
 }
+
+
+@media screen and (max-width: 768px) {
+    .search__input {
+        height: 56px;
+    } 
+  }
