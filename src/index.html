@@ -67,7 +67,7 @@
       </form>
     </div>
   </div>
-  
+  -->
 
   <section class="section section_result">
     <h2 class="about__title">Результаты поиска</h2>
@@ -127,7 +127,7 @@
     <div class="about__more">Показать еще</div>
 
   </section>
--->
+
 
   <section class="section">
     <div class="about__container">
@@ -148,30 +148,42 @@
     </div>
   </section>
 
-<!--
+
   <footer class="footer">
+    
     <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
-    <ul class="header__container">
+    
+    <ul class="footer__container footer__container_main">
+
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="<%= htmlWebpackPlugin.options.main_Url %>" class="header__link">Главная</a>
       </li>
+
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="https://praktikum.yandex.ru/" class="header__link" target="_blank">Яндекс.Практикум</a>
       </li>
+
+    </ul>
+
+    <ul class="footer__container footer__container_social">
+
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="https://github.com/shishovKA" class="header__link" target="_blank">
           <img src="<%=require('./images/github.svg').default%>" alt="github icon" class="logo">
         </a>
       </li>
+
       <li class="header__button header__button_dark header__button_not-selected-dark">
         <a href="https://facebook.com/" class="header__link" target="_blank">
           <img src="<%=require('./images/facebook.svg').default%>" alt="facebook icon" class="logo">
         </a>
       </li>
+
     </ul>
+
   </footer>
 
--->
+
 
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
