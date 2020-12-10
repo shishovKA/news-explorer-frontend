@@ -12,6 +12,10 @@
     z-index: 2;
 }
 
+.checkbox__label_dark {
+    background-image: url('../../../images/menu_dark.svg');  
+}
+
 
 .checkbox:checked + .checkbox__label {
     background-image: url('../../../images/menu_close.svg');
@@ -25,5 +29,11 @@
     
     .checkbox:checked + .checkbox__label + .header__border + .header__container {
         display: flex;
+        color: #FFFFFF;
     } 
+
+    .checkbox:checked + .checkbox__label + .header__border + .header__container {
+        display: flex;
+        color: #FFFFFF;
+    }
   }

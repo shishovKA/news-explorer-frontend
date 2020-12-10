@@ -18,3 +18,16 @@
   border-top-right-radius: 10px;
 }
 */
+
+@media screen and (max-width: 1180px) {
+  .card__image {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card__image {
+    height: 196px;
+  }
+
+}

@@ -22,7 +22,22 @@
     color: #1A1B22;
 }
 
+.about__title_result {
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .about__title_result {
+        padding-top: 40px;
+    }
+}
+
+
 @media screen and (max-width: 480px) {
+    .about__title_result {
+        padding-top: 32px;
+    }
+
     .about__title {
         font-size: 30px;
         line-height: 40px;
