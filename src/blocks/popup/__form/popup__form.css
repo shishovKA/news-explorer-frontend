@@ -2,3 +2,16 @@
   margin-top: 60px;
 }
 
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .popup__form {
+    margin-top: 22px;
+  }
+
+}

@@ -5,7 +5,7 @@
 @import url(./__close/popup__close.css);
 @import url(./__title/popup__title.css);
 @import url(./__form/popup__form.css);
-@import url(./__form/popup__form_edit.css);
+
 @import url(./__input/popup__input.css);
 @import url(./__button/popup__button.css);
 @import url(./__button/popup__button_save.css);
@@ -15,6 +15,7 @@
 
 .popup {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,5 +24,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .popup {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 56px;
+    align-items: start;
+  }
+
 }
 
