@@ -1,9 +1,14 @@
 .about__photo {
-    width: 464px;
-    height: 464px;
+    width: 33vw;
+    height: 33vw;
     flex-shrink: 0;
-    background-image: url(../../../images/about.jpg);
     border-radius: 1000px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+    .about__photo {
+        width: calc(90vw - 24px - 24px);
+        height: calc(90vw - 24px - 24px);
+    }
 }

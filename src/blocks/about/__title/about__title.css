@@ -1,12 +1,10 @@
 .about__title {
     margin: 0;
-    
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 46px;
-
     color: #1A1B22;
 }
 
@@ -21,5 +19,36 @@
     font-size: 40px;
     line-height: 46px;
 
+    max-width: 530px;
+
     color: #1A1B22;
+}
+
+.about__title_result {
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .about__title_result {
+        padding-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .about__title_result {
+        padding-top: 32px;
+    }
+
+    .about__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .info__title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 30px;
+        line-height: 34px;
+    }
 }

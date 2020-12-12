@@ -6,3 +6,18 @@
   box-sizing: border-box;
   padding: 20px 24px 24px 24px;
 }
+
+@media screen and (max-width: 1180px) {
+  .card__description {
+    height: calc(100% - 150px);
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card__description {
+    height: calc(100% - 196px);
+    padding: 16px;
+  }
+
+}

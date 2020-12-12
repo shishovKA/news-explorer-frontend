@@ -1,7 +1,7 @@
 .about__more {
     margin-left: auto;
     margin-right: auto;
-    width: 288px;
+    max-width: 288px;
     height: 64px;
     background: rgba(255, 255, 255, 1);
     border-radius: 80px;
@@ -22,4 +22,11 @@
 
 .about__more:hover {
     background: rgba(255, 255, 255, 0.9);
+}
+
+
+@media screen and (max-width: 480px) {
+    .about__more {
+        height: 56px;
+    }
 }

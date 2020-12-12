@@ -9,3 +9,17 @@
   line-height: 30px;
   color: #1A1B22;
 }
+
+
+@media screen and (max-width: 1180px) {
+  .card__name {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card__name {
+    margin-bottom: 10px;
+  }
+
+}

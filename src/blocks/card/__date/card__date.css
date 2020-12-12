@@ -15,3 +15,17 @@
 
     color: #B6BCBF;
 }
+
+
+@media screen and (max-width: 1180px) {
+    .card__date {
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card__date {
+      margin-bottom: 10px;
+    }
+  
+  }

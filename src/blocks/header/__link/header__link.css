@@ -16,4 +16,13 @@
     width: 100%;
     padding: 0px 19px;
     border-radius: 100px;
+    text-align: center;
+    justify-content: center;
 }
+
+@media screen and (max-width: 700px) {
+    .header__link_full {
+        height: 56px;
+        width: 100%;
+    } 
+  }

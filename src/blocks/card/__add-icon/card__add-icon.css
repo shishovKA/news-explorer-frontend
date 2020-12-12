@@ -26,4 +26,41 @@
   outline: none;
 }
 
+.icon__trash {
+  background: url(../../../images/trash.svg) center no-repeat; 
+  background-color: #FFFFFF;
+}
+
+.icon__trash:hover {
+  background: url(../../../images/trash_hover.svg) center no-repeat; 
+  background-color: #FFFFFF;
+}
+
+.card__icon_tag {
+  padding: 0px 12px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 40px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  text-align: center;
+
+  color: #000000;
+}
+
 

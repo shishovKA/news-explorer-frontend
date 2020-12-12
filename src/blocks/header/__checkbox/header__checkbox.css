@@ -1,0 +1,39 @@
+.checkbox {
+  display: none;  
+}
+
+.checkbox__label {
+    display: none;
+    margin: 0px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../images/menu.svg');
+    cursor: pointer;
+    z-index: 2;
+}
+
+.checkbox__label_dark {
+    background-image: url('../../../images/menu_dark.svg');  
+}
+
+
+.checkbox:checked + .checkbox__label {
+    background-image: url('../../../images/menu_close.svg');
+}
+
+@media screen and (max-width: 700px) {
+    .checkbox__label {
+        display: block;
+        
+    }  
+    
+    .checkbox:checked + .checkbox__label + .header__border + .header__container {
+        display: flex;
+        color: #FFFFFF;
+    } 
+
+    .checkbox:checked + .checkbox__label + .header__border + .header__container {
+        display: flex;
+        color: #FFFFFF;
+    }
+  }
