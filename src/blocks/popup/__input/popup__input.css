@@ -5,10 +5,12 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-
   border: none;
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  margin-top: 9px;
+  padding-bottom: 10px;
 }
 
 .popup__label {
@@ -23,6 +25,7 @@
 
 .popup__input:focus {
   outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
 
@@ -34,9 +37,7 @@
 @media screen and (max-width: 480px) {
 
   .popup__input {
-    width: 100%;
-    margin-top: 9px;
-    padding-bottom: 10px;
+
   }
 
 }

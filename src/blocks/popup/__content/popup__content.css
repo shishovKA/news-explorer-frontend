@@ -1,29 +1,27 @@
 .popup__content {
+  box-sizing: border-box;
   max-width: 430px;
-  min-height: 330px;
+  width: 100%;
+  min-height: 380px;
   background-color: #fff;
   border-radius: 16px;
   position: relative;
-  box-sizing: border-box;
   padding: 34px 36px;
-}
-
-@media screen and (max-width: 540px) {
-  .popup__content {
-    width: calc(100% - 60px);
-  }
 }
 
 
 @media screen and (max-width: 768px) {
-
+  .popup__content {
+    max-width: 430px;
+  }
 
 }
 
 @media screen and (max-width: 480px) {
 
   .popup__content {
-    width: 100%;
+    max-width: 480px;
+    height: 100%;
     padding: 16px;
   }
 
