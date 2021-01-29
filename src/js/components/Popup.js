@@ -43,7 +43,7 @@ export default class Popup {
         __content.append(__close);
         __content.append(__title);
         popup.append(__content);
-        popup.classList.toggle('popup_is-opened'); // opens when created
+        //popup.classList.toggle('popup_is-opened'); // opens when created
 
         this._popupNode = popup;
         this._contentNode = __content;
@@ -54,6 +54,10 @@ export default class Popup {
 
     _setEventListeners() {
         this._btnCloseNode.addEventListener('click', this.close);
+    };
+
+    open() {
+        this._popupNode.classList.add('popup_is-opened');
     };
 
     close() {
