@@ -44,7 +44,8 @@ const checkAuth = () => {
         userName.textContent = res.data.name;
         menu.switchLogin(true);      
     }, () => {
-        window.location.replace("/");
+        const mainUrl = (process.env.NODE_ENV === 'development') ? "/" : "https://shishovka.github.io/news-explorer-frontend/"
+        window.location.replace(mainUrl);
     });
 }
 
