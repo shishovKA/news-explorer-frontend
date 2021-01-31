@@ -58,10 +58,12 @@ export default class Header {
         li.classList.add('header__button');
         li.classList.add('header__button_not-selected');
         // a
+        const mainUrl = (process.env.NODE_ENV === 'development') ? "/" : "https://shishovka.github.io/news-explorer-frontend/"
+      
         const a = document.createElement('a');
         a.classList.add('header__link');
         a.classList.add('header__link_full');
-        a.href = "/";
+        a.href = mainUrl;
         a.textContent = 'Главная';
         li.append(a);
 
@@ -76,11 +78,14 @@ export default class Header {
         li.classList.add('header__button');
         li.classList.add('header__button_not-selected');
         // a
+        const savedNewsUrl = (process.env.NODE_ENV === 'development') ? "/saved-news.html" : "https://shishovka.github.io/news-explorer-frontend/saved-news"
+
         const a = document.createElement('a');
         a.classList.add('header__link');
         a.classList.add('header__link_full');
-        a.href = "/saved-news.html";
+        a.href = savedNewsUrl;
         a.textContent = 'Сохраненные статьи';
+
 
         li.append(a);
         this.savedNewsBtn = li;
