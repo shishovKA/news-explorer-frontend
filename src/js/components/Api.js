@@ -1,22 +1,21 @@
+import { newsApiKey } from "../constants"
+
 export default class Api {
     constructor(options) {
         this.baseUrl = options.baseUrl;
         this.headers = options.headers;
-        //this.getInitialCards = this.getInitialCards.bind(this);
-        //this.delCard = this.delCard.bind(this);
-        //this.like = this.like.bind(this);
-        //this.dislike = this.dislike.bind(this);
+        this.token = '';
     }
 
 
-    signUp(handler, errHandler) {
+    signUp(formCredentials, handler, errHandler) {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         const raw = JSON.stringify({
-            "name": "Константин Шишов",
-            "email": "shishov.k.a@yandex.ru",
-            "password": "dfdf3129"
+            "name": formCredentials.name,
+            "email": formCredentials.email,
+            "password": formCredentials.password
         });
 
         const requestOptions = {
@@ -36,203 +35,208 @@ export default class Api {
                 // если ошибка, переходим в catch
                 return Promise.reject(response.json());
             })
-            .then(result => console.log(result))
+            .then(result => {
+                console.log(result);
+                handler();
+            })
             .catch(error => {
                 console.log(error);
-                error.then( err => errHandler(err.message))
-                 
-            });
+                error.then(err => errHandler(err.message))
 
+            });
     }
 
-    /*
-        getInitialCards(handler) {
-            const url = this.baseUrl + '/cards';
-            const options = { headers: this.headers }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .then(result => {
-                    handler(result);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    
-    
-    
-        getUserInfo(handler) {
-            const url = this.baseUrl + '/users/me';
-            const options = { headers: this.headers }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .then(result => {
-                    handler(result);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    
-    
-        editProfile(values) {
-            const url = this.baseUrl + '/users/me';
-            const options = {
-                method: 'PATCH',
-                headers: this.headers,
-                body: JSON.stringify({
-                    name: values.name,
-                    about: values.about
-                })
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-    
-        }
-    
-    
-        editAvatar(link) {
-            const url = this.baseUrl + '/users/me/avatar';
-            const options = {
-                method: 'PATCH',
-                headers: this.headers,
-                body: JSON.stringify({
-                    avatar: link
-                })
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    
-    
-        postCard(cardValues) {
-            const url = this.baseUrl + '/cards';
-            const options = {
-                method: 'POST',
-                headers: this.headers,
-                body: JSON.stringify({
-                    name: cardValues.name,
-                    link: cardValues.link
-                })
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                });
-    
-        }
-    
-    
-    
-        delCard(cardId) {
-            const url = this.baseUrl + '/cards/' + cardId;
-            const options = {
-                method: 'DELETE',
-                headers: this.headers
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-    
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    
-    
-        like(cardId) {
-            const url = this.baseUrl + '/cards/like/' + cardId;
-            const options = {
-                method: 'PUT',
-                headers: this.headers
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    
-    
-        dislike(cardId) {
-            const url = this.baseUrl + '/cards/like/' + cardId;
-            const options = {
-                method: 'DELETE',
-                headers: this.headers
-            }
-    
-            return fetch(url, options)
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-                    // если ошибка, переходим в catch
-                    return Promise.reject(`Ошибка: ${res.status}`);
-                })
-                .catch((err) => {
-                    console.log(err); // выведем ошибку в консоль
-                });
-    
-        }
-    */
+
+    signIn(formCredentials, handler, errHandler) {
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        const raw = JSON.stringify({
+            "email": formCredentials.email,
+            "password": formCredentials.password
+        });
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        const url = this.baseUrl + '/signin';
+
+        return fetch(url, requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                // если ошибка, переходим в catch
+                return Promise.reject(response.json());
+            })
+            .then(result => {
+                handler(result);
+            })
+            .catch(error => {
+                console.log(error);
+                error.then(err => errHandler(err.message))
+
+            });
+    }
+
+    getUserInfo(handler, errHandler) {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${this.token}`);
+
+        const requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        const url = this.baseUrl + '/users/me';
+
+        fetch(url, requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                // если ошибка, переходим в catch
+                return Promise.reject(response.json());
+            })
+            .then(result => handler(result))
+            .catch(error => errHandler());
+    }
+
+
+    getNews(handler, errHandler, data) {
+        const requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        let to = new Date();
+        let from = new Date();
+        from.setDate(from.getDate() - 7);
+
+        to = to.toISOString();
+        from = from.toISOString();
+
+        const url = `https://nomoreparties.co/news/v2/everything?q=${data.q}&from=${from}&to=${to}&apiKey=${newsApiKey}&pageSize=100&language=ru`
+        console.log(url)
+        fetch(url, requestOptions)
+            .then(response => response.json())
+            .then(result => handler(result))
+            .catch(error => console.log('error', error));
+    }
+
+
+    postCard(cardData, handler, errHandler) {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${this.token}`);
+        myHeaders.append("Content-Type", "application/json");
+
+        console.log(cardData);
+
+        const raw = JSON.stringify({
+            "keyword": cardData['keyWord'], 
+            "title": cardData['title'],
+            "text": cardData['description'],
+            "date": cardData['publishedAt'],
+            "source": cardData['author'],
+            "link": cardData['url'],
+            "image": cardData['urlToImage'], 
+        });
+
+        console.log(raw);
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        const url = this.baseUrl + '/articles';
+
+        return fetch(url, requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                // если ошибка, переходим в catch
+                return Promise.reject(response.json());
+            })
+            .then(result => {
+                handler(result);
+            })
+            .catch(error => {
+                error.then(err => errHandler(err))
+            });
+    }
+
+
+    dellCard(id, handler, errHandler) {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${this.token}`);
+        myHeaders.append("Content-Type", "application/json");
+
+        const raw = "";
+
+        const requestOptions = {
+          method: 'DELETE',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+        
+        const url = this.baseUrl + '/articles/'+id;
+
+        return fetch(url, requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                // если ошибка, переходим в catch
+                return Promise.reject(response.json());
+            })
+            .then(result => {
+                handler(result);
+            })
+            .catch(error => {
+                error.then(err => errHandler(err))
+            });
+    }
+
+
+    getCards(handler, errHandler) {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${this.token}`);
+        myHeaders.append("Content-Type", "application/json");
+
+
+        const requestOptions = {
+          method: 'GET',
+          headers: myHeaders,
+          redirect: 'follow'
+        };
+        
+        const url = this.baseUrl + '/articles';
+
+        return fetch(url, requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                // если ошибка, переходим в catch
+                return Promise.reject(response.json());
+            })
+            .then(result => {
+                handler(result);
+            })
+            .catch(error => {
+                error.then(err => errHandler(err))
+            });
+    }
+
 
 }

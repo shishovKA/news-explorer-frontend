@@ -1,14 +1,16 @@
-export default class Form {
+import Form from "./Form"
+export default class FormLogin extends Form {
 
     constructor (container) {
-        this.container = container;
-        this.submitBtn;
-        this.reqErr;
-        this.inputs;
-        this._create();
-        this.validForm();
+        super(container);
+        //this.container = container;
+        //this.submitBtn;
+        //this.reqErr;
+        //this.inputs;
+        //this._create();
+        //this.validForm();
 
-        this.setReqErr = this.setReqErr.bind(this);
+        //this.setReqErr = this.setReqErr.bind(this);
     };
 
     _create() {
@@ -27,12 +29,6 @@ export default class Form {
                 label: 'Пароль',
                 placeholder: 'Введите пароль',
                 name: 'password',
-                type: 'text'
-            },
-            {
-                label: 'Имя',
-                placeholder: 'Введите свое имя',
-                name: 'name',
                 type: 'text'
             },
         ];
@@ -73,7 +69,7 @@ export default class Form {
 
         const btn = document.createElement('button');
         btn.classList.add('popup__button');
-        btn.textContent = 'Зарегистрироваться';
+        btn.textContent = 'Войти';
         this.submitBtn = btn;
         form.append(btn);
 
@@ -82,24 +78,9 @@ export default class Form {
         
     };
 
-    setReqErr(msg) {
-        this.reqErr.textContent = msg;
-    }
-
-    enableSubmitBtn(mode) {
-        if (mode) { 
-            this.submitBtn.classList.remove('popup__button_disabled');
-            this.submitBtn.disabled = false;
-        } else {
-            this.submitBtn.classList.add('popup__button_disabled');
-            this.submitBtn.disabled = true; 
-        }
-    }
-
     validForm() {
         if ((this.validUrl(this.inputs[0].value)) 
-            && (this.validEmpty(this.inputs[1].value)) 
-            && (this.validEmpty(this.inputs[2].value)) ) {
+            && (this.validEmpty(this.inputs[1].value)) ) {
                 this.enableSubmitBtn(true); 
             }
         else {
@@ -110,37 +91,9 @@ export default class Form {
     get formCredentials() {
         const result = {
             email: this.inputs[0].value,
-            password: this.inputs[1].value,
-            name: this.inputs[2].value,
+            password: this.inputs[1].value
         }
         return result
     }
-
-    validUrl(text) {
-        const validator = require("email-validator");
-        return validator.validate(text); // true
-    }
-
-    validEmpty(text) {
-        return (text)
-    }
-
-    setValidation(input, err, checkFunc, err_msg) {
-        input.addEventListener('input', (e) => {
-            if (!checkFunc(e.target.value)) {
-                this.enableSubmitBtn(false);
-                err.textContent = err_msg;
-                err.classList.add('popup__error_show');
-            } else {
-                err.classList.remove('popup__error_show');
-                this.validForm();
-            }
-        })
-    }
-
-    _setEventListeners() {
-        //this.btnCloseNode.addEventListener('click', this.close);
-    };
-
 
 }

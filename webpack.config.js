@@ -12,6 +12,7 @@ const savedNewsUrl = (process.env.NODE_ENV === 'development') ? "/saved-news.htm
 module.exports = {
   entry: { 
     main: './src/index.js',
+    saved: './src/pages/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -70,7 +71,7 @@ module.exports = {
       inject: false,
       template: './src/pages/saved-news.html',
       filename: 'saved-news.html',
-      chunks: ['main'],
+      chunks: ['saved'],
       main_Url: mainUrl,
       savedNews_Url: savedNewsUrl,
     }),

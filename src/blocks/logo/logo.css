@@ -1,3 +1,15 @@
 .logo {
-    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.logo_quit {
+    width: 25px;
+    height: 25px;
+    background-image: url(../../images/logout.svg);
+}
+
+.logo_quit_white {
+    width: 25px;
+    height: 25px;
+    background-image: url(../../images/logoutw.svg);
 }
