@@ -5,3 +5,7 @@
     margin: 4px;
     visibility: hidden;
 }
+
+.popup__error_show {
+    visibility: visible;
+}
